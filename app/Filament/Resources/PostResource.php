@@ -48,7 +48,7 @@ class PostResource extends Resource
                 Forms\Components\TextInput::make('slug')
                 ->required(),
 
-                SpatieMediaLibraryFileUpload::make('thumbnail')->collection('listings')
+                SpatieMediaLibraryFileUpload::make('thumbnail')->collection('posts')
                 ->multiple(),
                 MarkdownEditor::make('description'),
 
@@ -67,7 +67,7 @@ class PostResource extends Resource
                 Tables\Columns\TextColumn::make('created_at')->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')->dateTime(),
                 Tables\Columns\IconColumn::make('is_published')->boolean(),
-                SpatieMediaLibraryImageColumn::make('thumbnail')->collection('listings'),
+                SpatieMediaLibraryImageColumn::make('thumbnail')->collection('posts'),
             ])
             ->filters([
                 //
