@@ -21,4 +21,4 @@ Route::get('/', function () {
 Route::get('/', [Postcontroller::class, 'index']);
 // Single Post
 Route::get('/posts/{post}', [PostController::class, 'show']);
-// Single Listing
+

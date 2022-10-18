@@ -14,13 +14,9 @@
             <div class="card-text">
                 {{$post['description']}}
             </div>
-            @foreach ($post as $model_id)
-            <div>
-                <img class="img-fluid" src="{{$post->GetMedia('posts')}}" alt="..." />
-            </div>
-            @endforeach
         </div>
+@include('posts.carusel')
     </div>
 </header>
-
+@include('layout.footer')
 @endsection
