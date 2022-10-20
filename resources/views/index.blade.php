@@ -9,5 +9,4 @@
 @include('sections.service')
 @include('sections.portfolio')
 @include('sections.contact')
-@include('layout.footer')
 @endsection

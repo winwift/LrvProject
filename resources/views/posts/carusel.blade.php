@@ -9,7 +9,9 @@
     <div class="carousel-inner">
 @foreach( $post->getMedia('posts') as $media )
       <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-        <img src="{{ $media->getUrl() }}" class="d-block w-100" alt="{{ $post->title }}">
+        <div class="d-flex justify-content-center">
+          <img src="{{ $media->getUrl()}}" class=" d-block mw-100" style="max-height: 900px" alt="{{ $post->title }}">
+        </div>
       </div>
 @endforeach
     </div>

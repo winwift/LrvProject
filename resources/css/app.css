@@ -6074,7 +6074,7 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15%;
+  width: 20%;
   padding: 0;
   color: #fff;
   text-align: center;
@@ -7568,7 +7568,12 @@ textarea.form-control-lg {
 .pb-5 {
   padding-bottom: 3rem !important;
 }
-
+.pb-6 {
+  padding-bottom: 4rem !important;
+}
+.pb-7 {
+  padding-bottom: 5rem !important;
+}
 .ps-0 {
   padding-left: 0 !important;
 }
@@ -11316,7 +11321,7 @@ body {
 }
 
 hr.divider {
-  height: 0.2rem;
+  height: 0.15rem;
   max-width: 3.25rem;
   margin: 1.5rem auto;
   background-color: #f4623a;
@@ -11324,7 +11329,10 @@ hr.divider {
 }
 
 hr.divider-light {
-  background-color: #fff;
+  height: 0.14rem;
+  margin: 0.2rem auto;
+  background-color: #f4623a;
+  opacity: 1;
 }
 
 #mainNav {
@@ -11397,6 +11405,17 @@ header.masthead {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+}
+
+header.masthead::after {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 header.masthead h1, header.masthead .h1 {
   font-size: 2.25rem;
@@ -11606,3 +11625,16 @@ header.masthead h1, header.masthead .h1 {
   justify-content: center;
 }
 
+.background-darken {
+  width:100%; 
+  height:auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.back-button {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}

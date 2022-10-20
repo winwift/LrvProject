@@ -20,8 +20,7 @@
                                 </div>
                             </div>
                         </a>
-                    </div>
-    
+                    </div> 
 @endforeach  
     </div>
 <div class="d-flex justify-content-center">
@@ -32,5 +31,6 @@
 @else
 <p>No post found</p>
 @endunless
+
 
 
