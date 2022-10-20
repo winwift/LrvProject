@@ -11638,3 +11638,8 @@ header.masthead h1, header.masthead .h1 {
   top: 2%;
   left: 2%;
 }
+.pf-img {
+  max-height: 700px;
+  width: 100%;
+  object-fit: cover;
+}
