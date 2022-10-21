@@ -53,12 +53,11 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
-
     // Activate SimpleLightbox plugin for portfolio items
-    new SimpleLightbox({
+ new SimpleLightbox({
         elements: '#portfolio a.portfolio-box'
     });
-
+    
 });
 
 
@@ -76,6 +75,24 @@ Array.from(forms)
       form.classList.add('was-validated')
     }, false)
   })
-})()
+})();
 
+const exampleModal = document.getElementById('exampleModal')
+exampleModal.addEventListener('show.bs.modal', event => {
+  // Button that triggered the modal
+  const button = event.relatedTarget
+  // Extract info from data-bs-* attributes
+  const recipient = button.getAttribute('data-bs-title')
+  const decoration = button.getAttribute('data-bs-description')
+  // If necessary, you could initiate an AJAX request here
+  // and then do the updating in a callback.
+  //
+  // Update the modal's content.
+  const modalTitle = exampleModal.querySelector('.modal-title')
+  
 
+  const modalDescription = exampleModal.querySelector('.modal-description')
+  modalTitle.textContent = `${recipient}`
+
+  modalDescription.textContent = `${decoration}`
+});
