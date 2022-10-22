@@ -12,9 +12,8 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        
                         <a class="portfolio-box"  title="Project Name" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-title="Bathroom"
-                        data-bs-description="Description Bathroom">
+                        data-bs-description="Bathroom installation">
                         
                             <img class="img-fluid pf-img" src="{{URL::to('/')}}/images/bathroom.png" alt="..." />
                             <div class="portfolio-box-caption">
@@ -62,8 +61,8 @@
                 </div>
             </div>
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
+{{--             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
                   <div class="modal-content">
                     <div class="modal-header">
                       <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
@@ -71,15 +70,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
-                          <label for="recipient-name" class="col-form-label">Description:</label>
-                          <a type="text" class="modal-description" id="recipient-name"></a>
+                          <a type="text"  id="recipient-name"></a>
+                          <div class="modal-description"></div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
+
                   </div>
                 </div>
-              </div>
+              </div> --}}
         </section>
 
