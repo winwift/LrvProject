@@ -19,20 +19,9 @@ class RolePolicy
      */
     public function viewAny(User $user)
     {
-        return $user->is_admin === 1 && auth()->user()->HasRole(['super-admin']);
+        return $user->HasAnyRole(['super-admin', 'admin', 'moderator' , 'developer']);
     }
 
-    /**
-     * Determine whether the user can view the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  Spatie\Permission\Models\Role;  $role
-     * @return \Illuminate\Auth\Access\Response|bool
-     */
-    public function view(User $user, Role $role)
-    {
-        return $user->is_admin === 1 && auth()->user()->HasRole(['super-admin']);
-    }
 
     /**
      * Determine whether the user can create models.
@@ -42,7 +31,7 @@ class RolePolicy
      */
     public function create(User $user)
     {
-        return $user->is_admin === 1 && auth()->user()->HasRole(['super-admin']);
+        return $user->HasAnyRole(['super-admin', 'admin']);
     }
 
     /**
@@ -54,7 +43,7 @@ class RolePolicy
      */
     public function update(User $user, Role $role)
     {
-        return $user->is_admin === 1 && auth()->user()->HasRole(['super-admin']);
+        return $user->HasAnyRole(['super-admin', 'admin']);
     }
 
     /**
@@ -66,7 +55,7 @@ class RolePolicy
      */
     public function delete(User $user, Role $role)
     {
-        return $user->is_admin === 1 && auth()->user()->HasRole(['super-admin']);
+        return $user->HasAnyRole(['super-admin', 'admin']);
     }
 
     /**
@@ -78,7 +67,7 @@ class RolePolicy
      */
     public function restore(User $user, Role $role)
     {
-        return $user->is_admin === 1 && auth()->user()->HasRole(['super-admin']);
+        return $user->HasAnyRole(['super-admin', 'admin']);
     }
 
     /**
@@ -90,6 +79,6 @@ class RolePolicy
      */
     public function forceDelete(User $user, Role $role)
     {
-        return $user->is_admin === 1 && auth()->user()->HasRole(['super-admin']);
+        return $user->HasAnyRole(['super-admin', 'admin']);
     }
 }

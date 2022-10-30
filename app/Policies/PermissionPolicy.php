@@ -19,27 +19,10 @@ class PermissionPolicy
      */
     public function viewAny(User $user)
     {
-        if ($user->is_admin === 1 && auth()->user()->HasRole('super-admin'))
-        {
-            return true;
-        }
+        return $user->HasAnyRole(['super-admin', 'admin', 'moderator', 'developer']);
               
     }
 
-    /**
-     * Determine whether the user can view the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \Spatie\Permission\Models\Permission;  $permission
-     * @return \Illuminate\Auth\Access\Response|bool
-     */
-    public function view(User $user, Permission $permission)
-    {
-        if ($user->is_admin === 1 && auth()->user()->HasRole('super-admin'))
-        {
-            return true;
-        }
-    }
 
     /**
      * Determine whether the user can create models.
@@ -49,10 +32,7 @@ class PermissionPolicy
      */
     public function create(User $user)
     {
-        if ($user->is_admin === 1 && auth()->user()->HasRole('super-admin'))
-        {
-            return true;
-        }
+        return $user->HasAnyRole(['super-admin', 'admin']);
     }
 
     /**
@@ -64,10 +44,7 @@ class PermissionPolicy
      */
     public function update(User $user, Permission $permission)
     {
-        if ($user->is_admin === 1 && auth()->user()->HasRole('super-admin'))
-        {
-            return true;
-        }
+        return $user->HasAnyRole(['super-admin', 'admin']);
     }
 
     /**
@@ -79,10 +56,7 @@ class PermissionPolicy
      */
     public function delete(User $user, Permission $permission)
     {
-        if ($user->is_admin === 1 && auth()->user()->HasRole('super-admin'))
-        {
-            return true;
-        }
+        return $user->HasAnyRole(['super-admin', 'admin']);
     }
 
     /**
@@ -94,10 +68,7 @@ class PermissionPolicy
      */
     public function restore(User $user, Permission $permission)
     {
-        if ($user->is_admin === 1 && auth()->user()->HasRole('super-admin'))
-        {
-            return true;
-        }
+        return $user->HasAnyRole(['super-admin', 'admin']);
     }
 
     /**
@@ -109,9 +80,6 @@ class PermissionPolicy
      */
     public function forceDelete(User $user, Permission $permission)
     {
-        if ($user->is_admin === 1 && auth()->user()->HasRole('super-admin'))
-        {
-            return true;
-        }
+        return $user->HasAnyRole(['super-admin', 'admin']);
     }
 }

@@ -20,20 +20,10 @@ class UserPolicy
      */
     public function viewAny(User $user)
     {
-        return $user->is_admin === 1 && auth()->user()->HasRole(['super-admin','admin']);
+        return $user->HasAnyRole(['super-admin', 'admin']);
     }
 
-    /**
-     * Determine whether the user can view the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\User  $model
-     * @return \Illuminate\Auth\Access\Response|bool
-     */
-    public function view(User $user, User $model)
-    {
-        return $user->is_admin === 1 && auth()->user()->HasAnyRole(['super-admin', 'admin' ]);
-    }
+  
 
     /**
      * Determine whether the user can create models.
@@ -43,7 +33,7 @@ class UserPolicy
      */
     public function create(User $user)
     {
-        //
+        return $user->HasAnyRole(['super-admin', 'admin']);
     }
 
     /**
@@ -55,7 +45,7 @@ class UserPolicy
      */
     public function update(User $user, User $model)
     {
-        return $user->is_admin === 1 && auth()->user()->HasAnyRole(['super-admin']);
+        return $user->HasAnyRole(['super-admin', 'admin']);
     }
 
     /**
@@ -67,7 +57,7 @@ class UserPolicy
      */
     public function delete(User $user, User $model)
     {
-        return $user->is_admin === 1 && auth()->user()->HasAnyRole(['super-admin', 'admin']);
+        return $user->HasAnyRole(['super-admin', 'admin']);
     }
 
     /**
@@ -79,7 +69,7 @@ class UserPolicy
      */
     public function restore(User $user, User $model)
     {
-        return $user->is_admin === 1 && auth()->user()->HasAnyRole(['super-admin', 'admin']);
+        return $user->HasAnyRole(['super-admin', 'admin']);
     }
 
     /**
@@ -91,6 +81,6 @@ class UserPolicy
      */
     public function forceDelete(User $user, User $model)
     {
-        return $user->is_admin === 1 && auth()->user()->HasAnyRole(['super-admin', 'admin']);
+        return $user->HasAnyRole(['super-admin', 'admin']);
     }
 }
