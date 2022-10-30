@@ -20,7 +20,7 @@ class UserPolicy
      */
     public function viewAny(User $user)
     {
-        return $user->is_admin === 1 && auth()->user()->HasRole(['super-admin','admin']);
+        return $user->is_admin === 1;
     }
 
     /**
@@ -32,7 +32,7 @@ class UserPolicy
      */
     public function view(User $user, User $model)
     {
-        return $user->is_admin === 1 && auth()->user()->HasAnyRole(['super-admin', 'admin' ]);
+        return $user->is_admin === 1 ;
     }
 
     /**
@@ -55,7 +55,7 @@ class UserPolicy
      */
     public function update(User $user, User $model)
     {
-        return $user->is_admin === 1 && auth()->user()->HasAnyRole(['super-admin']);
+        return $user->is_admin === 1 ;
     }
 
     /**
@@ -67,7 +67,7 @@ class UserPolicy
      */
     public function delete(User $user, User $model)
     {
-        return $user->is_admin === 1 && auth()->user()->HasAnyRole(['super-admin', 'admin']);
+        return $user->is_admin === 1 ;
     }
 
     /**
@@ -79,7 +79,7 @@ class UserPolicy
      */
     public function restore(User $user, User $model)
     {
-        return $user->is_admin === 1 && auth()->user()->HasAnyRole(['super-admin', 'admin']);
+        return $user->is_admin === 1;
     }
 
     /**
@@ -91,6 +91,6 @@ class UserPolicy
      */
     public function forceDelete(User $user, User $model)
     {
-        return $user->is_admin === 1 && auth()->user()->HasAnyRole(['super-admin', 'admin']);
+        return $user->is_admin === 1 ;
     }
 }
