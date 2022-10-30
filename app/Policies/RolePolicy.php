@@ -19,7 +19,7 @@ class RolePolicy
      */
     public function viewAny(User $user)
     {
-        return $user->is_admin === 1 ;
+        return $user->is_admin === 1 && auth()->user()->HasRole(['super-admin']);
     }
 
     /**
@@ -31,7 +31,7 @@ class RolePolicy
      */
     public function view(User $user, Role $role)
     {
-        return $user->is_admin === 1 ;
+        return $user->is_admin === 1 && auth()->user()->HasRole(['super-admin']);
     }
 
     /**
@@ -42,7 +42,7 @@ class RolePolicy
      */
     public function create(User $user)
     {
-        return $user->is_admin === 1 ;
+        return $user->is_admin === 1 && auth()->user()->HasRole(['super-admin']);
     }
 
     /**
@@ -54,7 +54,7 @@ class RolePolicy
      */
     public function update(User $user, Role $role)
     {
-        return $user->is_admin === 1 ;
+        return $user->is_admin === 1 && auth()->user()->HasRole(['super-admin']);
     }
 
     /**
@@ -66,7 +66,7 @@ class RolePolicy
      */
     public function delete(User $user, Role $role)
     {
-        return $user->is_admin === 1 ;
+        return $user->is_admin === 1 && auth()->user()->HasRole(['super-admin']);
     }
 
     /**
@@ -78,7 +78,7 @@ class RolePolicy
      */
     public function restore(User $user, Role $role)
     {
-        return $user->is_admin === 1 ;
+        return $user->is_admin === 1 && auth()->user()->HasRole(['super-admin']);
     }
 
     /**
@@ -90,6 +90,6 @@ class RolePolicy
      */
     public function forceDelete(User $user, Role $role)
     {
-        return $user->is_admin === 1 ;
+        return $user->is_admin === 1 && auth()->user()->HasRole(['super-admin']);
     }
 }
