@@ -3,7 +3,7 @@
  <!-- Masterhead-->
  <header style="background-image: url('{{url('/images/woodfloor.jpg')}} '); background-size: cover">
     <div class="back-button">
-        <a class="btn btn-primary" href="http://127.0.0.1:8000/" role="button"><i class="bi bi-arrow-90deg-left"></i></a>
+        <a class="btn btn-primary" href="{{URL::to('/')}}" role="button"><i class="bi bi-arrow-90deg-left"></i></a>
     </div>
     <div class="background-darken pt-4">
         <div class="container h-100 ">
