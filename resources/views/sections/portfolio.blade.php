@@ -53,7 +53,7 @@
                         <a class="portfolio-box"  title="Project Name" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-title="Removal"
                         data-bs-description="Description Removal">
                             <img class="img-fluid pf-img" src="{{URL::to('/')}}/images/renovation.jpeg" alt="..." />
-                            <div class="portfolio-box-caption p-3">
+                            <div class="portfolio-box-caption">
                                 <div class="project-name">Demolition</div>
                             </div>
                         </a>
