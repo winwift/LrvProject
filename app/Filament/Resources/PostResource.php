@@ -62,7 +62,7 @@ class PostResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')->sortable(),
-                Tables\Columns\TextColumn::make('description')->sortable()->limit('30'),
+                Tables\Columns\TextColumn::make('description')->sortable()->limit('25'),
                 Tables\Columns\TextColumn::make('title')->limit('20')->sortable(),
                 Tables\Columns\TextColumn::make('created_at')->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')->dateTime(),
