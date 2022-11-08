@@ -62,8 +62,8 @@ class PostResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')->sortable(),
-                Tables\Columns\TextColumn::make('description')->sortable(),
-                Tables\Columns\TextColumn::make('title')->limit('50')->sortable(),
+                Tables\Columns\TextColumn::make('description')->sortable()->limit('30'),
+                Tables\Columns\TextColumn::make('title')->limit('20')->sortable(),
                 Tables\Columns\TextColumn::make('created_at')->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')->dateTime(),
                 Tables\Columns\IconColumn::make('is_published')->boolean(),
