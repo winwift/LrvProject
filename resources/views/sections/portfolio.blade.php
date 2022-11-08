@@ -1,8 +1,8 @@
         <!-- Portfolio-->
         <section id="portfolio">
             <div class="container-fluid p-0" >
-                <div class="row g-0" style="justify-content: center">
-                    <div class="col-lg-4 col-sm-6" >
+                <div class="row g-0 " style="justify-content: center";>
+                    <div class="col-lg-4 col-sm-6" style="max-height: 700px" >
                         <a class="portfolio-box"  title="Project Name" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-title="Bedroom"
                         data-bs-description="Description Bedroom">
                             <img class="pf-img" src="{{URL::to('/')}}/images/instalation.jpeg"alt="..." />
