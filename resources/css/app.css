@@ -11643,6 +11643,7 @@ header.masthead h1, header.masthead .h1 {
   position: absolute;
   top: 2%;
   left: 2%;
+  z-index: 100;
 }
 .pf-img {
   max-height: 700px;
