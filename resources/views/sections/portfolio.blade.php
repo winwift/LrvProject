@@ -6,7 +6,9 @@
                         <a class="portfolio-box"  title="Project Name" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-title="Bedroom"
                         data-bs-description="Description Bedroom">
                             <img class="pf-img" src="{{URL::to('/')}}/images/instalation.jpeg"alt="..." />
-                            
+                            <div class="portfolio-box-caption">
+                                <div class="project-name">Bedroom </div>
+                            </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
@@ -14,14 +16,18 @@
                         data-bs-description="Bathroom installation">
                         
                             <img class="pf-img" src="{{URL::to('/')}}/images/bathroom.jpeg" alt="..." />
-                            
+                            <div class="portfolio-box-caption">
+                                <div class="project-name">Bathroom</div>
+                            </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box"  title="Kitchen" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-title="Kitchen"
                         data-bs-description="Description Kitchen">
                             <img class="pf-img"  src="{{URL::to('/')}}/images/kitchen.jpeg" alt="..." />
-                            
+                            <div class="portfolio-box-caption">
+                                <div class="project-name">Kitchen</div>
+                            </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
@@ -29,21 +35,27 @@
                         data-bs-description="Description decoration">
                         
                             <img class="pf-img" src="{{URL::to('/')}}/images/painting.jpeg" alt="..." />
-                            
+                            <div class="portfolio-box-caption">
+                                <div class="project-name">Decoration</div>
+                            </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box"  title="Project Name" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-title="Plumbing"
                         data-bs-description="Description Plumbing">
                             <img class="pf-img"  src="{{URL::to('/')}}/images/plumbing.jpeg" alt="..." />
-                            
+                            <div class="portfolio-box-caption">
+                                <div class="project-name">Plumbing</div>
+                            </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box"  title="Project Name" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-title="Removal"
                         data-bs-description="Description Removal">
                             <img class="pf-img" src="{{URL::to('/')}}/images/renovation.jpeg" alt="..." />
-                            
+                            <div class="portfolio-box-caption">
+                                <div class="project-name">Demolition</div>
+                            </div>
                         </a>
                     </div>
                 </div>
