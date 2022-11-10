@@ -8,10 +8,11 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Image\Manipulations;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Spatie\Tags\HasTags;
 
 class Post extends Model implements HasMedia
 {
-    use HasFactory ,InteractsWithMedia;
+    use HasFactory ,InteractsWithMedia, HasTags;
 
     protected $fillable = ['category_id',
         'title', 
@@ -43,10 +44,7 @@ class Post extends Model implements HasMedia
         return $this->belongsTo(Category::class);
     }
 
-    public function tags()
-    {
-        return $this->belongsToMany(Tag::class);
-    }
+
 
         
 }
