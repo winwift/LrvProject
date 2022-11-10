@@ -16,7 +16,9 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
 use Illuminate\Database\Eloquent\Builder;
 use Filament\Forms\Components\MarkdownEditor;
+use Filament\Tables\Columns\SpatieTagsColumn;
 use App\Filament\Resources\PostResource\Pages;
+use Filament\Forms\Components\SpatieTagsInput;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PostResource\RelationManagers;
 use Filament\Tables\Columns\SpatieMediaLibraryImageColumn;
@@ -51,7 +53,7 @@ class PostResource extends Resource
                 SpatieMediaLibraryFileUpload::make('thumbnail')->collection('posts')
                 ->multiple(),
                 MarkdownEditor::make('description'),
-
+                SpatieTagsInput::make('tags'),
                 Toggle::make('is_published'),
                 ])
             ]);
@@ -62,11 +64,12 @@ class PostResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')->sortable(),
-                Tables\Columns\TextColumn::make('description')->sortable()->limit('30'),
+                Tables\Columns\TextColumn::make('description')->sortable()->limit('25'),
                 Tables\Columns\TextColumn::make('title')->limit('20')->sortable(),
                 Tables\Columns\TextColumn::make('created_at')->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')->dateTime(),
                 Tables\Columns\IconColumn::make('is_published')->boolean(),
+                SpatieTagsColumn::make('tags'),
                 SpatieMediaLibraryImageColumn::make('thumbnail')->collection('posts'),
             ])
             ->filters([
