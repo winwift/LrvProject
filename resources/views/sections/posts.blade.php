@@ -14,7 +14,7 @@
                                 
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                    <a class="card-title"  href="/posts/{{$post['id']}}" >{{$post['title']}}</a>
+                                    <a class="card-title text-decoration-none"  href="/posts/{{$post['id']}}" >{{$post['title']}}</a>
                                     </div>
                                     <div>
                                     <small class="text-muted">Category:</small>
