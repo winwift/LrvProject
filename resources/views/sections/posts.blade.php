@@ -6,20 +6,38 @@
     <div class="row g-0" id="portfolio_id">
 @foreach($posts as $post)
         <div class="col-lg-4 col-sm-6" >
-                        <a class="portfolio-box" href="/posts/{{$post['id']}}" title="Project Name">
-                            <img class="img-fluid" src="{{$post->getFirstMediaUrl('posts')}}" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-name">
-                                    <h4 href="/posts/{{$post['id']}}" class="text-decoration-none">{{$post['title']}}</h4>
+                        <div class="card mb-4">
+                            
+                            <img class="card-img-top" src="{{$post->getFirstMediaUrl('posts')}}" alt="..." />
+                            
+                            <div class="card-body">
+                                
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                    <a class="card-title"  href="/posts/{{$post['id']}}" >{{$post['title']}}</a>
+                                    </div>
+                                    <div>
+                                    <small class="text-muted">Category:</small>
+                                    <a href="/posts/{{$post['id']}}" class="text-decoration-none card-subtitle">{{$post->category->name}}</a>
+                                    </div>
                                 </div>
-                                <div class="project-category text-dark-50">
-                                    <a href="/posts/{{$post['id']}}" class="text-decoration-none">{{$post->category->name}}</a>
+
+                                <p class="card-text pt-3">{{ Str::limit($post->description, 120)}}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <div>
+                                    @foreach($post->tags as $tag)
+                                        <span class="badge bg-primary">{{$tag->name}}</span>
+                                    @endforeach
+                                    </div>
+
+
+                                <small class="text-muted">{{ $post->value('created_at') }}</small>   
                                 </div>
-                                <div class="project-category text-dark-50">
-                                    <a href="/posts/{{$post['id']}}" class="text-decoration-none">{{ \Illuminate\Support\Str::limit($post['description'], )}}</a>
-                                </div>
+                                
+                            
                             </div>
-                        </a>
+                            
                     </div> 
 @endforeach  
     </div>
