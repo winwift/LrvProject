@@ -5,7 +5,7 @@
 <section class="container-fluid p-0">
     <div class="row" style="align-items: end"  >
 @foreach($posts as $post)
-        <div class="col-4 " >
+        <div class="col-4 p-0 pt-3 " >
                 <div class="card ">
                     <img class="card-img-top" src="{{$post->getFirstMediaUrl('posts')}}" alt="..." />
                     <div class="card-body">
