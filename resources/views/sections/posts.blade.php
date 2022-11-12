@@ -5,9 +5,9 @@
 <section class="container-fluid p-0">
     <div class="row" style="align-items: end"  >
 @foreach($posts as $post)
-        <div class="col-4 p-0 pt-3 " >
-                <div class="card ">
-                    <img class="card-img-top" src="{{$post->getFirstMediaUrl('posts')}}" alt="..." />
+        <div class=" col-lg-4 col-md-6 col-sm-12 p-0 pt-3 " >
+                <div class="card">
+                    <a href="/posts/{{$post['id']}}"><img class="card-img-top" src="{{$post->getFirstMediaUrl('posts')}}" alt="..." /></a>
                     <div class="card-body">
                                 
                         <div class="d-flex justify-content-between align-items-center">
