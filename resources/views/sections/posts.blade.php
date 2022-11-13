@@ -2,8 +2,8 @@
 
 @unless(count($posts) == 0)
 <!--Posts-->
-<section class="container-fluid p-0">
-    <div class="row" style="align-items: end"  >
+<section class="container-fluid ">
+    <div class="row pb-3" style="align-items: end"  >
 @foreach($posts as $post)
         <div class=" col-lg-4 col-md-6 col-sm-12 p-0 pt-3 " >
                 <div class="card">
