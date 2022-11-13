@@ -2,7 +2,7 @@
 
 @unless(count($posts) == 0)
 <!--Posts-->
-<section class="container-fluid ">
+<section id="galery" class="container-fluid ">
     <div class="row pb-3" style="align-items: end"  >
 @foreach($posts as $post)
         <div class=" col-lg-4 col-md-6 col-sm-12 p-1 pt-3  " >
