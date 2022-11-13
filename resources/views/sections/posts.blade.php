@@ -29,7 +29,7 @@
                                 </div>
 
 
-                                <small class="text-muted">{{ $post->value('created_at') }}</small>   
+                                <small class="text-muted">{{ $post['created_at']->format('d/m/Y') }}</small>   
                             </div>
                                 
                             
