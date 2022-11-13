@@ -4520,6 +4520,10 @@ textarea.form-control-lg {
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
+
+.card:hover {
+  transform: scale(1.005);
+}
 .card > hr {
   margin-right: 0;
   margin-left: 0;
